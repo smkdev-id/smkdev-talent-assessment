@@ -6,7 +6,6 @@ from dataclasses import dataclass
 
 import keras # type: ignore
 import numpy as np
-import tensorflow as tf # type: ignore
 from PIL import Image, ImageDraw
 
 sys.path.append(pathlib.Path.cwd().as_posix())
