@@ -7,7 +7,6 @@ from dataclasses import dataclass
 import keras # type: ignore
 import numpy as np
 from PIL import Image, ImageDraw
-
 sys.path.append(pathlib.Path.cwd().as_posix())
 from extra.fetch.dtdl import rps_download
 
