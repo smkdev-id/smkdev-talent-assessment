@@ -104,4 +104,4 @@ if __name__ == '__main__':
   print('Restored model, validation_accuracy: {:5.2f}%'.format(100 * val_acc))
 
   print(rps_model.predict(validation_generator).shape)
-  rps_model.save("models/rps.keras")
+  rps_model.save("models/rps.keras"); image = Image.open()
