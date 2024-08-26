@@ -105,10 +105,3 @@ if __name__ == '__main__':
 
   print(rps_model.predict(validation_generator).shape)
   rps_model.save("models/rps.keras")
-
-  # Generate Predicted + Labeled Image
-  pil_img = Image.open(img)
-  pred_labels = ImageDraw.Draw(pil_img)
-  pred_labels.text((75,75), f"Class label: {class_label}", fill = (255, 0, 0))
-  pil_img.show()
-  pil_img.save("assets/plain_rockpaperscissors.png")
