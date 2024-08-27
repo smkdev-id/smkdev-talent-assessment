@@ -94,20 +94,3 @@ if __name__ == '__main__':
   max_index = np.argmax(classes)
   class_label = class_name[max_index]
   print("Class label: " + class_label)
-
-  # Evaluation
-  rps_model.summary()
-  loss, acc = rps_model.evaluate(train_generator)
-  val_loss, val_acc = rps_model.evaluate(validation_generator)
-  print('Restored model, accuracy: {:5.2f}%'.format(100 * acc))
-  print('Restored model, validation_accuracy: {:5.2f}%'.format(100 * val_acc))
-
-  print(rps_model.predict(validation_generator).shape)
-  rps_model.save("models/rps.keras");
-
-  # Generate Predicted + Labeled Image
-  pil_img = Image.open(img)
-  pred_labels = ImageDraw.Draw(pil_img)
-  pred_labels.text((75,75), f"Class label: {class_label}", fill = (255, 0, 0))
-  pil_img.show()
-  pil_img.save("assets/plain_rockpaperscissors.png")
