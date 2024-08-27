@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
 from __future__ import annotations
 import os, sys, glob, random, pathlib
 from typing import List
 from dataclasses import dataclass
 
-import keras # type: ignore
+import keras
 import numpy as np
 from PIL import Image, ImageDraw
 sys.path.append(pathlib.Path.cwd().as_posix())
